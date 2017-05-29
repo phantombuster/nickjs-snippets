@@ -1,0 +1,84 @@
+{
+		"New Tab a/a": {
+		"prefix": "nick.newTab",
+		"body": [
+			"nick.newTab().then(async (tab) => {",
+			"\t$0",
+			"})",
+			".then(() => {",
+			"\tnick.exit(0)",
+			"})",
+			".catch((err) => {",
+			"\tconsole.log(\"An error occured:\", err)",
+			"\tnick.exit(1)",
+			"})"
+		],
+		"description": "Creating a new tab with Nickjs with Promises."
+	},
+	"Open a/a": {
+		"prefix": "open",
+		"body": "await tab.open(${url})",
+		"description": "Open with async/await;"
+	},
+	"Inject a/a": {
+		"prefix": "inject",
+		"body": "await tab.inject(${script})",
+		"description": "Inject with async/await;"
+	},
+	"waitUntilVisible a/a": {
+		"prefix": "waitUntilVisible",
+		"body": "await tab.waitUntilVisible(${selector}, ${time})",
+		"description": "Wait for the element corresponding to the selector to be visible with async/await."
+	},
+	"click": {
+		"prefix": "click",
+		"body": "await tab.click(${selector})",
+		"description": "Click on the element corresponding to the selector with async/await."
+	},
+	"fill": {
+		"prefix": "fill",
+		"body": "await tab.fill(${selector}, { ${key}: ${value} }, true)",
+		"description": "Fill the form corresponding to the selector by linking name of the inputs to the value with async/await."
+	},
+	"evaluate": {
+		"prefix": "evaluate",
+		"body": [
+			"const result = await tab.evaluate((arg, callback) => {",
+			"\t$0//Use callback(err, result) to end this function",
+			"}, ${arg})"
+		],
+		"description": "Execute a function inside the page context with async/await(the function executed must be ES5 compliant)."
+	},
+	"getUrl": {
+		"prefix": "getUrl",
+		"body": "const url = await tab.getUrl()",
+		"description": "Get the current page URL with async/await."
+	},
+	"getContent": {
+		"prefix": "getContent",
+		"body": "const content = await tab.getContent()",
+		"description": "Get the current page content with async/await."
+	},
+	"sendKeys": {
+		"prefix": "sendKeys",
+		"body": "await tab.sendKeys(${selector}, ${keys}, ${options})",
+		"description": "Send a specific key press to the page with async/await."
+	},
+	"screenshot": {
+		"prefix": "screenshot",
+		"body": "await tab.screenshot(${fileName})",
+		"description": "Take a screenshot of the page with async/await"
+	},
+	"Open cb": {
+		"prefix": "open",
+		"body": [
+			"await tab.open(${url}, (err)=> {",
+			"\tif (err)",
+			"\t\tnick.exit(1)",
+			"\t$0",
+			"})"
+		]
+		,
+		"description": "Open with callback."
+	}
+}

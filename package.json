@@ -1,0 +1,26 @@
+{
+	"name": "nickjs",
+	"displayName": "Nickjs snippets",
+	"description": "Simple snippets for using nickjs librairy.",
+	"icon": "images/nickjs.png",
+	"version": "0.0.3",
+	"publisher": "sashimy",
+	"engines": {"vscode": "^0.10.1"},
+	"galleryBanner": {
+		"color": "#35c2db",
+		"theme": "light"
+	},
+	"categories": ["Snippets"],
+	"keywords": [
+		"snippets",
+		"javascript",
+		"nickjs"
+	],
+	"license": "SEE LICENSE IN LICENSE",
+	"contributes": {
+		"snippets": [{
+			"language": "javascript",
+			"path": "./snippets/javascript.json"
+		}]
+	}
+}
