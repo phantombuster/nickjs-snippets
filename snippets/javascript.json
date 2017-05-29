@@ -37,7 +37,7 @@
 	},
 	"fill": {
 		"prefix": "fill",
-		"body": "await tab.fill(${selector}, { ${key}: ${value} }, true)",
+		"body": "await tab.fill(${selector}, {${key}: ${value}}, {submit: true})",
 		"description": "Fill the form corresponding to the selector by linking name of the inputs to the value with async/await."
 	},
 	"evaluate": {

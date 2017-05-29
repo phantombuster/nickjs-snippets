@@ -3,11 +3,11 @@
 	"displayName": "Nickjs snippets",
 	"description": "Simple snippets for using nickjs librairy.",
 	"icon": "images/nickjs.png",
-	"version": "0.0.4",
+	"version": "0.0.5",
 	"publisher": "sashimy",
 	"engines": {"vscode": "^0.10.1"},
 	"galleryBanner": {
-		"color": "#35c2db",
+		"color": "#FFFFFF",
 		"theme": "light"
 	},
 	"categories": ["Snippets"],
